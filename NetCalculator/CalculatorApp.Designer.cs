@@ -1,6 +1,6 @@
 ﻿namespace NetCalculator
 {
-    partial class Form1
+    partial class CalculatorApp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.evalBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addBtn = new System.Windows.Forms.Button();
             this.subBtn = new System.Windows.Forms.Button();
@@ -58,24 +58,25 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // evalBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(7, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(798, 129);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.evalBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.evalBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.evalBox.Font = new System.Drawing.Font("Consolas", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.evalBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.evalBox.Location = new System.Drawing.Point(7, 3);
+            this.evalBox.Name = "evalBox";
+            this.evalBox.ReadOnly = true;
+            this.evalBox.Size = new System.Drawing.Size(798, 132);
+            this.evalBox.TabIndex = 0;
+            this.evalBox.TabStop = false;
+            this.evalBox.Text = "0.0";
+            this.evalBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.evalBox.Visible = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.evalBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -417,7 +418,7 @@
             this.rgtParBtn.UseVisualStyleBackColor = false;
             this.rgtParBtn.Click += new System.EventHandler(this.rgtParBtn_Click);
             // 
-            // Form1
+            // CalculatorApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -449,8 +450,8 @@
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Calculator";
+            this.Location = new System.Drawing.Point(15, 15);
+            this.Name = "CalculatorApp";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -461,7 +462,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox evalBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button subBtn;

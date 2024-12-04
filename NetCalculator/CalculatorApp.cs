@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace NetCalculator
 {
-    public partial class Form1 : Form
+    public partial class CalculatorApp : Form
     {
-        public Form1()
+        public CalculatorApp()
         {
             InitializeComponent();
+            evalBox.Text = "0.0";
         }
 
         #region Calculator Functions
@@ -82,7 +83,7 @@ namespace NetCalculator
         }
 #endregion
 
-        #region Basic Arithmetic
+        #region Math Functions
         private void addBtn_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
@@ -102,9 +103,7 @@ namespace NetCalculator
         {
             throw new System.NotImplementedException();
         }
-        #endregion
         
-        #region Advanced Math
         private void pwrBtn_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
