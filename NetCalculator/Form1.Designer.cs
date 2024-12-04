@@ -31,41 +31,43 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.subBtn = new System.Windows.Forms.Button();
+            this.mulBtn = new System.Windows.Forms.Button();
+            this.divBtn = new System.Windows.Forms.Button();
+            this.evalBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.oneBtn = new System.Windows.Forms.Button();
+            this.twoBtn = new System.Windows.Forms.Button();
+            this.threeBtn = new System.Windows.Forms.Button();
+            this.sixBtn = new System.Windows.Forms.Button();
+            this.nineBtn = new System.Windows.Forms.Button();
+            this.fiveBtn = new System.Windows.Forms.Button();
+            this.eightBtn = new System.Windows.Forms.Button();
+            this.zeroBtn = new System.Windows.Forms.Button();
+            this.fourBtn = new System.Windows.Forms.Button();
+            this.sevenBtn = new System.Windows.Forms.Button();
+            this.lnBtn = new System.Windows.Forms.Button();
+            this.logBtn = new System.Windows.Forms.Button();
+            this.pwrBtn = new System.Windows.Forms.Button();
+            this.decBtn = new System.Windows.Forms.Button();
+            this.rtBtn = new System.Windows.Forms.Button();
+            this.ePwrXBtn = new System.Windows.Forms.Button();
+            this.lftParBtn = new System.Windows.Forms.Button();
+            this.rgtParBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(7, 10);
+            this.textBox1.Location = new System.Drawing.Point(7, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(798, 136);
+            this.textBox1.Size = new System.Drawing.Size(798, 129);
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "0";
@@ -77,323 +79,374 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 163);
+            this.panel1.Size = new System.Drawing.Size(814, 126);
             this.panel1.TabIndex = 1;
             // 
-            // button4
+            // addBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button4.Location = new System.Drawing.Point(543, 303);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 128);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = false;
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.addBtn.Location = new System.Drawing.Point(543, 266);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(128, 128);
+            this.addBtn.TabIndex = 5;
+            this.addBtn.Text = "+";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // button5
+            // subBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button5.Location = new System.Drawing.Point(543, 437);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 128);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = false;
+            this.subBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.subBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.subBtn.Location = new System.Drawing.Point(543, 400);
+            this.subBtn.Name = "subBtn";
+            this.subBtn.Size = new System.Drawing.Size(128, 128);
+            this.subBtn.TabIndex = 6;
+            this.subBtn.Text = "-";
+            this.subBtn.UseVisualStyleBackColor = false;
+            this.subBtn.Click += new System.EventHandler(this.subBtn_Click);
             // 
-            // button1
+            // mulBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button1.Location = new System.Drawing.Point(677, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 128);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "x";
-            this.button1.UseVisualStyleBackColor = false;
+            this.mulBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.mulBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mulBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mulBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.mulBtn.Location = new System.Drawing.Point(677, 266);
+            this.mulBtn.Name = "mulBtn";
+            this.mulBtn.Size = new System.Drawing.Size(128, 128);
+            this.mulBtn.TabIndex = 7;
+            this.mulBtn.Text = "x";
+            this.mulBtn.UseVisualStyleBackColor = false;
+            this.mulBtn.Click += new System.EventHandler(this.mulBtn_Click);
             // 
-            // button2
+            // divBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button2.Location = new System.Drawing.Point(677, 437);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 128);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "÷";
-            this.button2.UseVisualStyleBackColor = false;
+            this.divBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.divBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.divBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.divBtn.Location = new System.Drawing.Point(677, 400);
+            this.divBtn.Name = "divBtn";
+            this.divBtn.Size = new System.Drawing.Size(128, 128);
+            this.divBtn.TabIndex = 8;
+            this.divBtn.Text = "÷";
+            this.divBtn.UseVisualStyleBackColor = false;
+            this.divBtn.Click += new System.EventHandler(this.divBtn_Click);
             // 
-            // button3
+            // evalBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(409, 571);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(396, 128);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "=";
-            this.button3.UseVisualStyleBackColor = false;
+            this.evalBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.evalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.evalBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.evalBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(222)))), ((int)(((byte)(128)))));
+            this.evalBtn.Location = new System.Drawing.Point(677, 534);
+            this.evalBtn.Name = "evalBtn";
+            this.evalBtn.Size = new System.Drawing.Size(128, 129);
+            this.evalBtn.TabIndex = 9;
+            this.evalBtn.Text = "=";
+            this.evalBtn.UseVisualStyleBackColor = false;
+            this.evalBtn.Click += new System.EventHandler(this.evalBtn_Click);
             // 
-            // button8
+            // clearBtn
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.Location = new System.Drawing.Point(677, 169);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(128, 128);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "C";
-            this.button8.UseVisualStyleBackColor = false;
+            this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("Courier New", 27.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(222)))), ((int)(((byte)(128)))));
+            this.clearBtn.Location = new System.Drawing.Point(677, 132);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(128, 128);
+            this.clearBtn.TabIndex = 12;
+            this.clearBtn.Text = "C";
+            this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // button13
+            // oneBtn
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button13.Location = new System.Drawing.Point(141, 169);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(128, 128);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "1";
-            this.button13.UseVisualStyleBackColor = false;
+            this.oneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.oneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oneBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.oneBtn.Location = new System.Drawing.Point(141, 132);
+            this.oneBtn.Name = "oneBtn";
+            this.oneBtn.Size = new System.Drawing.Size(128, 128);
+            this.oneBtn.TabIndex = 17;
+            this.oneBtn.Text = "1";
+            this.oneBtn.UseVisualStyleBackColor = false;
+            this.oneBtn.Click += new System.EventHandler(this.oneBtn_Click);
             // 
-            // button14
+            // twoBtn
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button14.Location = new System.Drawing.Point(275, 169);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(128, 128);
-            this.button14.TabIndex = 18;
-            this.button14.Text = "2";
-            this.button14.UseVisualStyleBackColor = false;
+            this.twoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.twoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twoBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.twoBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.twoBtn.Location = new System.Drawing.Point(275, 132);
+            this.twoBtn.Name = "twoBtn";
+            this.twoBtn.Size = new System.Drawing.Size(128, 128);
+            this.twoBtn.TabIndex = 18;
+            this.twoBtn.Text = "2";
+            this.twoBtn.UseVisualStyleBackColor = false;
+            this.twoBtn.Click += new System.EventHandler(this.twoBtn_Click);
             // 
-            // button15
+            // threeBtn
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button15.Location = new System.Drawing.Point(409, 169);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(128, 128);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "3";
-            this.button15.UseVisualStyleBackColor = false;
+            this.threeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.threeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.threeBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.threeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.threeBtn.Location = new System.Drawing.Point(409, 132);
+            this.threeBtn.Name = "threeBtn";
+            this.threeBtn.Size = new System.Drawing.Size(128, 128);
+            this.threeBtn.TabIndex = 19;
+            this.threeBtn.Text = "3";
+            this.threeBtn.UseVisualStyleBackColor = false;
+            this.threeBtn.Click += new System.EventHandler(this.threeBtn_Click);
             // 
-            // button16
+            // sixBtn
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button16.Location = new System.Drawing.Point(409, 303);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(128, 128);
-            this.button16.TabIndex = 20;
-            this.button16.Text = "6";
-            this.button16.UseVisualStyleBackColor = false;
+            this.sixBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.sixBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sixBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sixBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.sixBtn.Location = new System.Drawing.Point(409, 266);
+            this.sixBtn.Name = "sixBtn";
+            this.sixBtn.Size = new System.Drawing.Size(128, 128);
+            this.sixBtn.TabIndex = 20;
+            this.sixBtn.Text = "6";
+            this.sixBtn.UseVisualStyleBackColor = false;
+            this.sixBtn.Click += new System.EventHandler(this.sixBtn_Click);
             // 
-            // button17
+            // nineBtn
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button17.Location = new System.Drawing.Point(409, 437);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(128, 128);
-            this.button17.TabIndex = 21;
-            this.button17.Text = "9";
-            this.button17.UseVisualStyleBackColor = false;
+            this.nineBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.nineBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nineBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nineBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.nineBtn.Location = new System.Drawing.Point(409, 400);
+            this.nineBtn.Name = "nineBtn";
+            this.nineBtn.Size = new System.Drawing.Size(128, 128);
+            this.nineBtn.TabIndex = 21;
+            this.nineBtn.Text = "9";
+            this.nineBtn.UseVisualStyleBackColor = false;
+            this.nineBtn.Click += new System.EventHandler(this.nineBtn_Click);
             // 
-            // button19
+            // fiveBtn
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button19.Location = new System.Drawing.Point(275, 303);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(128, 128);
-            this.button19.TabIndex = 23;
-            this.button19.Text = "5";
-            this.button19.UseVisualStyleBackColor = false;
+            this.fiveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.fiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fiveBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fiveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.fiveBtn.Location = new System.Drawing.Point(275, 266);
+            this.fiveBtn.Name = "fiveBtn";
+            this.fiveBtn.Size = new System.Drawing.Size(128, 128);
+            this.fiveBtn.TabIndex = 23;
+            this.fiveBtn.Text = "5";
+            this.fiveBtn.UseVisualStyleBackColor = false;
+            this.fiveBtn.Click += new System.EventHandler(this.fiveBtn_Click);
             // 
-            // button20
+            // eightBtn
             // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button20.Location = new System.Drawing.Point(275, 437);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(128, 128);
-            this.button20.TabIndex = 24;
-            this.button20.Text = "8";
-            this.button20.UseVisualStyleBackColor = false;
+            this.eightBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.eightBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eightBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eightBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.eightBtn.Location = new System.Drawing.Point(275, 400);
+            this.eightBtn.Name = "eightBtn";
+            this.eightBtn.Size = new System.Drawing.Size(128, 128);
+            this.eightBtn.TabIndex = 24;
+            this.eightBtn.Text = "8";
+            this.eightBtn.UseVisualStyleBackColor = false;
+            this.eightBtn.Click += new System.EventHandler(this.eightBtn_Click);
             // 
-            // button21
+            // zeroBtn
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button21.Location = new System.Drawing.Point(275, 571);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(128, 128);
-            this.button21.TabIndex = 25;
-            this.button21.Text = "0";
-            this.button21.UseVisualStyleBackColor = false;
+            this.zeroBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.zeroBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.zeroBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zeroBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.zeroBtn.Location = new System.Drawing.Point(275, 535);
+            this.zeroBtn.Name = "zeroBtn";
+            this.zeroBtn.Size = new System.Drawing.Size(128, 128);
+            this.zeroBtn.TabIndex = 25;
+            this.zeroBtn.Text = "0";
+            this.zeroBtn.UseVisualStyleBackColor = false;
+            this.zeroBtn.Click += new System.EventHandler(this.zeroBtn_Click);
             // 
-            // button7
+            // fourBtn
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button7.Location = new System.Drawing.Point(141, 303);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(128, 128);
-            this.button7.TabIndex = 26;
-            this.button7.Text = "4";
-            this.button7.UseVisualStyleBackColor = false;
+            this.fourBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.fourBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fourBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.fourBtn.Location = new System.Drawing.Point(141, 266);
+            this.fourBtn.Name = "fourBtn";
+            this.fourBtn.Size = new System.Drawing.Size(128, 128);
+            this.fourBtn.TabIndex = 26;
+            this.fourBtn.Text = "4";
+            this.fourBtn.UseVisualStyleBackColor = false;
+            this.fourBtn.Click += new System.EventHandler(this.fourBtn_Click);
             // 
-            // button6
+            // sevenBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button6.Location = new System.Drawing.Point(141, 437);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 128);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "7";
-            this.button6.UseVisualStyleBackColor = false;
+            this.sevenBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.sevenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sevenBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sevenBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.sevenBtn.Location = new System.Drawing.Point(141, 400);
+            this.sevenBtn.Name = "sevenBtn";
+            this.sevenBtn.Size = new System.Drawing.Size(128, 128);
+            this.sevenBtn.TabIndex = 27;
+            this.sevenBtn.Text = "7";
+            this.sevenBtn.UseVisualStyleBackColor = false;
+            this.sevenBtn.Click += new System.EventHandler(this.sevenBtn_Click);
             // 
-            // button10
+            // lnBtn
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Courier New", 26.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button10.Location = new System.Drawing.Point(7, 169);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(128, 128);
-            this.button10.TabIndex = 28;
-            this.button10.Text = "ln";
-            this.button10.UseVisualStyleBackColor = false;
+            this.lnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lnBtn.Font = new System.Drawing.Font("Courier New", 26.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.lnBtn.Location = new System.Drawing.Point(7, 132);
+            this.lnBtn.Name = "lnBtn";
+            this.lnBtn.Size = new System.Drawing.Size(128, 128);
+            this.lnBtn.TabIndex = 28;
+            this.lnBtn.Text = "ln";
+            this.lnBtn.UseVisualStyleBackColor = false;
+            this.lnBtn.Click += new System.EventHandler(this.lnBtn_Click);
             // 
-            // button11
+            // logBtn
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button11.Location = new System.Drawing.Point(7, 303);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(128, 128);
-            this.button11.TabIndex = 29;
-            this.button11.Text = "log";
-            this.button11.UseVisualStyleBackColor = false;
+            this.logBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.logBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logBtn.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.logBtn.Location = new System.Drawing.Point(7, 266);
+            this.logBtn.Name = "logBtn";
+            this.logBtn.Size = new System.Drawing.Size(128, 128);
+            this.logBtn.TabIndex = 29;
+            this.logBtn.Text = "log";
+            this.logBtn.UseVisualStyleBackColor = false;
+            this.logBtn.Click += new System.EventHandler(this.logBtn_Click);
             // 
-            // button12
+            // pwrBtn
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button12.Location = new System.Drawing.Point(543, 169);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(128, 128);
-            this.button12.TabIndex = 30;
-            this.button12.Text = "^";
-            this.button12.UseVisualStyleBackColor = false;
+            this.pwrBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pwrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pwrBtn.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwrBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.pwrBtn.Location = new System.Drawing.Point(543, 132);
+            this.pwrBtn.Name = "pwrBtn";
+            this.pwrBtn.Size = new System.Drawing.Size(128, 128);
+            this.pwrBtn.TabIndex = 30;
+            this.pwrBtn.Text = "^";
+            this.pwrBtn.UseVisualStyleBackColor = false;
+            this.pwrBtn.Click += new System.EventHandler(this.pwrBtn_Click);
             // 
-            // button18
+            // decBtn
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button18.Location = new System.Drawing.Point(141, 571);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(128, 128);
-            this.button18.TabIndex = 31;
-            this.button18.Text = ".";
-            this.button18.UseVisualStyleBackColor = false;
+            this.decBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.decBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.decBtn.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.decBtn.Location = new System.Drawing.Point(141, 534);
+            this.decBtn.Name = "decBtn";
+            this.decBtn.Size = new System.Drawing.Size(128, 129);
+            this.decBtn.TabIndex = 31;
+            this.decBtn.Text = ".";
+            this.decBtn.UseVisualStyleBackColor = false;
             // 
-            // button22
+            // rtBtn
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button22.Location = new System.Drawing.Point(7, 572);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(128, 128);
-            this.button22.TabIndex = 32;
-            this.button22.Text = "n√";
-            this.button22.UseVisualStyleBackColor = false;
+            this.rtBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.rtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rtBtn.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.rtBtn.Location = new System.Drawing.Point(7, 535);
+            this.rtBtn.Name = "rtBtn";
+            this.rtBtn.Size = new System.Drawing.Size(128, 128);
+            this.rtBtn.TabIndex = 32;
+            this.rtBtn.Text = "n√";
+            this.rtBtn.UseVisualStyleBackColor = false;
+            this.rtBtn.Click += new System.EventHandler(this.rtBtn_Click);
             // 
-            // button23
+            // ePwrXBtn
             // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.button23.Location = new System.Drawing.Point(7, 437);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(128, 128);
-            this.button23.TabIndex = 33;
-            this.button23.Text = "e^x";
-            this.button23.UseVisualStyleBackColor = false;
+            this.ePwrXBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.ePwrXBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ePwrXBtn.Font = new System.Drawing.Font("Courier New", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ePwrXBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.ePwrXBtn.Location = new System.Drawing.Point(7, 400);
+            this.ePwrXBtn.Name = "ePwrXBtn";
+            this.ePwrXBtn.Size = new System.Drawing.Size(128, 128);
+            this.ePwrXBtn.TabIndex = 33;
+            this.ePwrXBtn.Text = "e^x";
+            this.ePwrXBtn.UseVisualStyleBackColor = false;
+            this.ePwrXBtn.Click += new System.EventHandler(this.ePwrXBtn_Click);
+            // 
+            // lftParBtn
+            // 
+            this.lftParBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lftParBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lftParBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lftParBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.lftParBtn.Location = new System.Drawing.Point(409, 535);
+            this.lftParBtn.Name = "lftParBtn";
+            this.lftParBtn.Size = new System.Drawing.Size(128, 128);
+            this.lftParBtn.TabIndex = 34;
+            this.lftParBtn.Text = "(";
+            this.lftParBtn.UseVisualStyleBackColor = false;
+            this.lftParBtn.Click += new System.EventHandler(this.lftParBtn_Click);
+            // 
+            // rgtParBtn
+            // 
+            this.rgtParBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.rgtParBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rgtParBtn.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgtParBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.rgtParBtn.Location = new System.Drawing.Point(543, 534);
+            this.rgtParBtn.Name = "rgtParBtn";
+            this.rgtParBtn.Size = new System.Drawing.Size(128, 129);
+            this.rgtParBtn.TabIndex = 35;
+            this.rgtParBtn.Text = ")";
+            this.rgtParBtn.UseVisualStyleBackColor = false;
+            this.rgtParBtn.Click += new System.EventHandler(this.rgtParBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(814, 706);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(814, 671);
+            this.Controls.Add(this.rgtParBtn);
+            this.Controls.Add(this.lftParBtn);
+            this.Controls.Add(this.ePwrXBtn);
+            this.Controls.Add(this.rtBtn);
+            this.Controls.Add(this.decBtn);
+            this.Controls.Add(this.pwrBtn);
+            this.Controls.Add(this.logBtn);
+            this.Controls.Add(this.lnBtn);
+            this.Controls.Add(this.sevenBtn);
+            this.Controls.Add(this.fourBtn);
+            this.Controls.Add(this.zeroBtn);
+            this.Controls.Add(this.eightBtn);
+            this.Controls.Add(this.fiveBtn);
+            this.Controls.Add(this.nineBtn);
+            this.Controls.Add(this.sixBtn);
+            this.Controls.Add(this.threeBtn);
+            this.Controls.Add(this.twoBtn);
+            this.Controls.Add(this.oneBtn);
+            this.Controls.Add(this.clearBtn);
+            this.Controls.Add(this.evalBtn);
+            this.Controls.Add(this.divBtn);
+            this.Controls.Add(this.mulBtn);
+            this.Controls.Add(this.subBtn);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -401,34 +454,36 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button lftParBtn;
+        private System.Windows.Forms.Button rgtParBtn;
 
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button subBtn;
+        private System.Windows.Forms.Button mulBtn;
+        private System.Windows.Forms.Button divBtn;
+        private System.Windows.Forms.Button evalBtn;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button oneBtn;
+        private System.Windows.Forms.Button twoBtn;
+        private System.Windows.Forms.Button threeBtn;
+        private System.Windows.Forms.Button sixBtn;
+        private System.Windows.Forms.Button nineBtn;
+        private System.Windows.Forms.Button fiveBtn;
+        private System.Windows.Forms.Button eightBtn;
+        private System.Windows.Forms.Button zeroBtn;
+        private System.Windows.Forms.Button fourBtn;
+        private System.Windows.Forms.Button sevenBtn;
+        private System.Windows.Forms.Button lnBtn;
+        private System.Windows.Forms.Button logBtn;
+        private System.Windows.Forms.Button pwrBtn;
+        private System.Windows.Forms.Button decBtn;
+        private System.Windows.Forms.Button rtBtn;
+        private System.Windows.Forms.Button ePwrXBtn;
     }
 }
