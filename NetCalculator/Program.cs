@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetCalculator
-{
+namespace NetCalculator;
+
     static class Program
     {
         /// <summary>
@@ -19,4 +19,3 @@ namespace NetCalculator
             Application.Run(new CalculatorApp());
         }
     }
-}

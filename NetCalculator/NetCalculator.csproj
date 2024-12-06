@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <LangVersion>12</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +53,12 @@
     <Compile Include="CalculatorApp.Designer.cs">
       <DependentUpon>CalculatorApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExpressionParser.cs" />
+    <Compile Include="Nodes\Arithmetic\ArithmeticNode.cs" />
+    <Compile Include="Nodes\ConstantNode.cs" />
+    <Compile Include="Nodes\Function\FunctionNode.cs" />
+    <Compile Include="Nodes\INode.cs" />
+    <Compile Include="Nodes\OperationType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CalculatorApp.resx">
@@ -78,9 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Eval\Expressions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

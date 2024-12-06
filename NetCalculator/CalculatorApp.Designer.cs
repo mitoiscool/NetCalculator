@@ -72,7 +72,6 @@
             this.evalBox.TabStop = false;
             this.evalBox.Text = "0.0";
             this.evalBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.evalBox.Visible = false;
             // 
             // panel1
             // 
@@ -361,6 +360,7 @@
             this.decBtn.TabIndex = 31;
             this.decBtn.Text = ".";
             this.decBtn.UseVisualStyleBackColor = false;
+            this.decBtn.Click += new System.EventHandler(this.decBtn_Click);
             // 
             // rtBtn
             // 
@@ -455,6 +455,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button lftParBtn;
