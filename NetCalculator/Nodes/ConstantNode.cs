@@ -7,4 +7,8 @@ public class ConstantNode(double constant) : INode
         return constant;
     }
 
+    public override string ToString()
+    {
+        return $"     {constant}";
+    }
 }

@@ -10,13 +10,14 @@ namespace NetCalculator;
 
 public class ExpressionParser
 {
-    private Stack<INode> _expressionStack = new Stack<INode>();
-    private Stack<OperationType> _operatorStack = new Stack<OperationType>();
+    private DebugStack<INode> _expressionStack = new DebugStack<INode>();
+    private DebugStack<OperationType> _operatorStack = new DebugStack<OperationType>();
     private StringBuilder _constantBuilder = new StringBuilder();
 
     public void OpenParenthesis()
     {
-        //if(_operatorStack.Count == 0 || _operatorStack.Peek() != OperationType.Mul)
+        MarkEndConstant();
+        //if(_operatorStack.Count == 0 || _operatorStack.Peek().ShouldImplicitlyMultiply()) // parentheses are used for function notation aswell so verify here
         //    Operation(OperationType.Mul); // support implicit multiplication
         
         _operatorStack.Push(OperationType.Parenthesis);
@@ -24,6 +25,8 @@ public class ExpressionParser
 
     public void CloseParenthesis()
     {
+        MarkEndConstant();
+        
         while (_operatorStack.Count > 0 && _operatorStack.Peek() != OperationType.Parenthesis)
         {
             ProcessOperator();
@@ -69,13 +72,24 @@ public class ExpressionParser
             ProcessOperator();
         }
 
-        if (_expressionStack.Count != 1)
+        double result = 1; // set to one for the purposes of multiplying in later block, it will be reset anyway in other block
+        if (_expressionStack.Count > 1)
         {
-            throw new InvalidOperationException("Multiple expressions on final stack.");
+            // they should be multiplied implicitly ex: 4ln
+
+            while (_expressionStack.Count > 0)
+            {
+                result *= _expressionStack.Pop().GetValue();
+            }
+        }
+        else
+        { // more simple, no implicit mult
+            var finalNode = _expressionStack.Pop();
+            result = finalNode.GetValue();
         }
 
-        double result = _expressionStack.Pop().GetValue();
         Reset();
+
         return result;
     }
 
@@ -130,7 +144,8 @@ public class ExpressionParser
         return type switch
         {
             OperationType.Parenthesis => 0,
-            OperationType.Ln or OperationType.EpwrX => 3,
+            OperationType.Ln or OperationType.EpwrX => 4, // only because they are direct one args therefore should take place of next constant instantly
+            OperationType.Pwr or OperationType.Rt => 3,
             OperationType.Mul or OperationType.Div or OperationType.Log or OperationType.Ln or OperationType.EpwrX => 2,
             OperationType.Add or OperationType.Sub => 1,
             _ => throw new ArgumentOutOfRangeException(nameof(type), $"Unexpected type: {type}")

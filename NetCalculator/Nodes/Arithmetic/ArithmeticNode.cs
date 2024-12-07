@@ -30,9 +30,14 @@ public class ArithmeticNode(INode operand1, INode operand2, OperationType type) 
                 return Math.Pow(d2, 1.0 / d1);
             
             case OperationType.Log:
-                return Math.Round(Math.Log(operand1.GetValue(), operand2.GetValue()), 4);
+                return Math.Log(d1, d2);
         }
 
         throw new NotSupportedException("Could not handle Operation type: " + type);
+    }
+    
+    public override string ToString()
+    {
+        return $"{type.ToString()}( {Environment.NewLine}      {operand1.ToString()} {Environment.NewLine}      {operand2.ToString()} {Environment.NewLine}";
     }
 }

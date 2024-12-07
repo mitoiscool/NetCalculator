@@ -9,9 +9,9 @@ public class FunctionNode(INode target, OperationType type) : INode
         switch (type)
         {
             case OperationType.Ln:
-                return Math.Round(Math.Log(target.GetValue()), 4);
+                return Math.Log(target.GetValue());
             
-            case OperationType.EpwrX: //e^x
+            case OperationType.EpwrX: //e^x taylor series
                 double sum = 1; 
                 double term = 1; // Current term, starts as x^0 / 0! = 1
                 int n = 1; // Counter for factorial and power
@@ -27,5 +27,10 @@ public class FunctionNode(INode target, OperationType type) : INode
         }
 
         throw new NotSupportedException($"No function type {type} provided for function node.");
+    }
+
+    public override string ToString()
+    {
+        return $"{type.ToString()} ({Environment.NewLine}      {target.ToString()}";
     }
 }

@@ -17,11 +17,34 @@ namespace NetCalculator;
     {
         private StringBuilder _evalBoxBuilder = new StringBuilder();
         private ExpressionParser _expressionParser = new ExpressionParser();
+        private const float DefaultFontSize = 48.0f;
 
         void UpdateEvalBox(string s)
         {
             _evalBoxBuilder.Append(s);
             evalBox.Text = _evalBoxBuilder.ToString();
+            
+            // calculate font scaling
+            
+            int sizeThreshold = 12;  
+            float minFontSize = 20.0f;
+            
+            int textLength = _evalBoxBuilder.Length;
+            float scaleFactor = Math.Max((float)sizeThreshold / textLength, minFontSize / DefaultFontSize);
+            
+            float newFontSize = DefaultFontSize * scaleFactor;
+            
+            newFontSize = Clamp(newFontSize, minFontSize, DefaultFontSize);
+
+            // size font accordingly
+            evalBox.Font = new Font(evalBox.Font.FontFamily, newFontSize);
+        }
+
+        float Clamp(float value, float min, float max)
+        { // does not exist in this .net version and common font scaling algo relies on it
+            if (value < min) return min;
+            if (value > max) return max;
+            return value;
         }
         
         public CalculatorApp()
@@ -33,17 +56,21 @@ namespace NetCalculator;
         private void clearBtn_Click(object sender, EventArgs e)
         {
             _expressionParser.Reset();
-            evalBox.Text = "0.0";
+            evalBox.Text = "0";
             _evalBoxBuilder.Clear();
+            evalBox.Font = new Font(evalBox.Font.FontFamily, DefaultFontSize);
         }
         
         private void evalBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                double result = _expressionParser.Evaluate();
+                double result = Math.Round(_expressionParser.Evaluate(), 4);
 
-                evalBox.Text = result.ToString();
+                _evalBoxBuilder.Clear();
+                
+                UpdateEvalBox(result.ToString()); // use updateevalbox for dynamic scaling
+
                 _expressionParser.Reset();
                 _evalBoxBuilder.Clear();
             }
@@ -186,7 +213,8 @@ namespace NetCalculator;
             _expressionParser.MarkEndConstant();
 
             _expressionParser.Operation(OperationType.Rt);
-            _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, _evalBoxBuilder.Length); // remove previous element to switch here
+            Console.WriteLine($"{_evalBoxBuilder.Length} - {lastConstant.Length}, {_evalBoxBuilder.Length}");
+            _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, lastConstant.Length); // remove previous element to switch here
             UpdateEvalBox($"rt<{lastConstant}>(");
             _expressionParser.OpenParenthesis();
         }

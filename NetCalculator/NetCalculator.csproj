@@ -61,6 +61,7 @@
     <Compile Include="Nodes\OperationType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DebugStack.cs" />
     <EmbeddedResource Include="CalculatorApp.resx">
       <DependentUpon>CalculatorApp.cs</DependentUpon>
     </EmbeddedResource>
