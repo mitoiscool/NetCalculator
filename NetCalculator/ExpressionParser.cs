@@ -16,8 +16,8 @@ public class ExpressionParser
 
     public void OpenParenthesis()
     {
-        if(_operatorStack.Count == 0 || _operatorStack.Peek() != OperationType.Mul)
-            Operation(OperationType.Mul); // support implicit multiplication
+        //if(_operatorStack.Count == 0 || _operatorStack.Peek() != OperationType.Mul)
+        //    Operation(OperationType.Mul); // support implicit multiplication
         
         _operatorStack.Push(OperationType.Parenthesis);
     }
