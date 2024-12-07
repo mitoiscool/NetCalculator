@@ -102,25 +102,37 @@ public class ExpressionParser
 
     private void ProcessOperator()
     {
-        if (_operatorStack.Count == 0 || _expressionStack.Count < 2)
+        if (_operatorStack.Count == 0) // ensure that args are all good
         {
-            throw new InvalidOperationException("No operator or inadequate expression count.");
+            throw new InvalidOperationException("No operator");
         }
-
+        
         var opType = _operatorStack.Pop();
-        var op2 = _expressionStack.Pop();
-        var op1 = _expressionStack.Pop(); // stack is LIFO so pop operand 2 first
 
-        _expressionStack.Push(new ArithmeticNode(op1, op2, opType));
+        if (opType.IsFunction())
+        {
+            var op1 = _expressionStack.Pop();
+            _expressionStack.Push(new FunctionNode(op1, opType));
+        }
+        else
+        {
+            var op2 = _expressionStack.Pop();
+            var op1 = _expressionStack.Pop(); // stack is LIFO so pop operand 2 first
+
+            _expressionStack.Push(new ArithmeticNode(op1, op2, opType));
+        }
+        
+        
     }
 
     int Precedence(OperationType type)
     {
         return type switch
         {
+            OperationType.Parenthesis => 0,
+            OperationType.Ln or OperationType.EpwrX => 3,
             OperationType.Mul or OperationType.Div or OperationType.Log or OperationType.Ln or OperationType.EpwrX => 2,
             OperationType.Add or OperationType.Sub => 1,
-            OperationType.Parenthesis => 0,
             _ => throw new ArgumentOutOfRangeException(nameof(type), $"Unexpected type: {type}")
         };
     }

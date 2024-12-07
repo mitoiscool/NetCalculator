@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NetCalculator.Nodes;
 using NetCalculator.Nodes.Arithmetic;
 using NetCalculator.Nodes.Function;
 
@@ -172,10 +173,22 @@ namespace NetCalculator;
 
         private void rtBtn_Click(object sender, EventArgs e)
         {
+            string lastConstant = _expressionParser.GetLastConstant();
+
+            if (lastConstant == String.Empty)
+            {
+                evalBox.Text = "rt<arg1>(arg2)";
+                _expressionParser.Reset();
+                _evalBoxBuilder.Clear();
+                return;
+            }
+            
             _expressionParser.MarkEndConstant();
 
             _expressionParser.Operation(OperationType.Rt);
-            UpdateEvalBox("rt(");
+            _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, _evalBoxBuilder.Length); // remove previous element to switch here
+            UpdateEvalBox($"rt<{lastConstant}>(");
+            _expressionParser.OpenParenthesis();
         }
 
         private void ePwrXBtn_Click(object sender, EventArgs e)
@@ -190,7 +203,7 @@ namespace NetCalculator;
 
             if (lastConstant == String.Empty)
             {
-                evalBox.Text = "NO ARG";
+                evalBox.Text = "log<arg1>(arg2)";
                 _expressionParser.Reset();
                 _evalBoxBuilder.Clear();
                 return;
@@ -200,7 +213,7 @@ namespace NetCalculator;
 
             _expressionParser.Operation(OperationType.Log);
             _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, _evalBoxBuilder.Length); // remove previous element to switch here
-            UpdateEvalBox($"log{lastConstant}(");
+            UpdateEvalBox($"log<{lastConstant}>(");
             _expressionParser.OpenParenthesis();
         }
 

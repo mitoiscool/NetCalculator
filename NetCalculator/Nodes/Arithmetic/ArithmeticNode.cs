@@ -27,7 +27,7 @@ public class ArithmeticNode(INode operand1, INode operand2, OperationType type) 
                 return Math.Pow(d1, d2);
             
             case OperationType.Rt:
-                return Math.Pow(d1, 1.0 / d2);
+                return Math.Pow(d2, 1.0 / d1);
             
             case OperationType.Log:
                 return Math.Round(Math.Log(operand1.GetValue(), operand2.GetValue()), 4);
