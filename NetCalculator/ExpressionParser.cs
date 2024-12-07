@@ -17,9 +17,7 @@ public class ExpressionParser
     public void OpenParenthesis()
     {
         MarkEndConstant();
-        //if(_operatorStack.Count == 0 || _operatorStack.Peek().ShouldImplicitlyMultiply()) // parentheses are used for function notation aswell so verify here
-        //    Operation(OperationType.Mul); // support implicit multiplication
-        
+
         _operatorStack.Push(OperationType.Parenthesis);
     }
 

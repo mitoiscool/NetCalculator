@@ -27,7 +27,7 @@ namespace NetCalculator;
             // calculate font scaling
             
             int sizeThreshold = 12;  
-            float minFontSize = 20.0f;
+            float minFontSize = 12.0f;
             
             int textLength = _evalBoxBuilder.Length;
             float scaleFactor = Math.Max((float)sizeThreshold / textLength, minFontSize / DefaultFontSize);
@@ -213,7 +213,6 @@ namespace NetCalculator;
             _expressionParser.MarkEndConstant();
 
             _expressionParser.Operation(OperationType.Rt);
-            Console.WriteLine($"{_evalBoxBuilder.Length} - {lastConstant.Length}, {_evalBoxBuilder.Length}");
             _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, lastConstant.Length); // remove previous element to switch here
             UpdateEvalBox($"rt<{lastConstant}>(");
             _expressionParser.OpenParenthesis();
@@ -240,7 +239,7 @@ namespace NetCalculator;
             _expressionParser.MarkEndConstant();
 
             _expressionParser.Operation(OperationType.Log);
-            _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, _evalBoxBuilder.Length); // remove previous element to switch here
+            _evalBoxBuilder.Remove(_evalBoxBuilder.Length - lastConstant.Length, lastConstant.Length); // remove previous element to switch here
             UpdateEvalBox($"log<{lastConstant}>(");
             _expressionParser.OpenParenthesis();
         }
